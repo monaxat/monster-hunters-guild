@@ -67,19 +67,11 @@ The repository contains the following project specifications:
 
 The following files describe the visual assets used by the website:
 
-  -----------------------------------------------------------------------
-  File                                Description
-  ----------------------------------- -----------------------------------
-  `description-logo.md`               Visual direction and requirements
-                                      for the guild logo.
+`description-logo.md` - Visual direction and requirements for the guild logo.
 
-  `description-hunters.md`            Visual descriptions and art
-                                      direction for the guild's hunters.
+`description-hunters.md` - Visual descriptions and art direction for the guild's hunters.
 
-  `description-clients.md`            Visual descriptions and art
-                                      direction for client testimonial
-                                      portraits.
-  -----------------------------------------------------------------------
+`description-clients.md` - Visual descriptions and art direction for client testimonial portraits.
 
 These documents define the intended appearance and help keep visual
 assets consistent with the overall identity of The Wyrm Hunters.
