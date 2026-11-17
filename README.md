@@ -14,6 +14,8 @@ This is not primarily a benchmark of coding speed. The focus is on how
 effectively an agent can work with an incomplete but structured product
 brief and turn it into a consistent implementation.
 
+**The project brief, implementation specifications, and supporting assets required to build the website are located in the gild-site/ directory.**
+
 ## What This Project Evaluates
 
 The benchmark focuses on several areas:
