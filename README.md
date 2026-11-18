@@ -14,7 +14,17 @@ This is not primarily a benchmark of coding speed. The focus is on how
 effectively an agent can work with an incomplete but structured product
 brief and turn it into a consistent implementation.
 
-**The project brief, implementation specifications, and supporting assets required to build the website are located in the gild-site/ directory.**
+**The project brief, implementation specifications, and supporting assets required to build the website are located in the `guild-site/` directory.**
+
+Some resources intentionally contain errors to test how an agent responds to them. For example:
+
+- `description.md` lists six services, while `visual-identity.md` and `asset-preparation-specification.md` define only five service icons. The service names do not fully align: `description.md` has “Caravan Protection” and “Territory Protection,” while `visual-identity.md` has “Escort & Protection” and no icon category for territory protection.
+- `technologies.md` requires English and Quenya translations with matching keys, but the documentation does not include a completed Quenya translation.
+- In `technologies.md`, the Internationalization section is numbered 7 even though it follows section 11.
+- `hunters.md` describes hunter portraits, but its shared prompt refers to “client” portraits and asks for each “client” to have a distinct face.
+
+For best results when running a test, clone this repository and copy the `guild-site/` directory to a separate location. Run your LLM experiments using that copy.
+
 
 ## What This Project Evaluates
 
@@ -55,25 +65,25 @@ integrated into the application.
 
 ## Project Documentation
 
-The repository contains the following project specifications:
+The `guild-site/` directory contains the following project specifications:
 
-`technologies.md` - Technical requirements, recommended technologies, architecture considerations, and implementation guidelines.
+`guild-site/technologies.md` - Technical requirements, recommended technologies, architecture considerations, and implementation guidelines.
 
-`description.md` - The website brief written from the client's perspective. Describes the website, its purpose, content, and required sections.
+`guild-site/description.md` - The website brief written from the client's perspective. Describes the website, its purpose, content, and required sections.
 
-`description-visual-identity.md` - The visual identity specification, including the color palette and service icon style.
+`guild-site/visual-identity.md` - The visual identity specification, including the color palette and service icon style.
 
-`asset-preparation-plan-specification.md` - Requirements for assets preparationd and outputs
+`guild-site/asset-preparation-specification.md` - Requirements for asset preparation and outputs.
 
 ### Visual Asset Specifications
 
 The following files describe the visual assets used by the website:
 
-`description-logo.md` - Visual direction and requirements for the guild logo.
+`guild-site/logo.md` - Visual direction and requirements for the guild logo.
 
-`description-hunters.md` - Visual descriptions and art direction for the guild's hunters.
+`guild-site/hunters.md` - Visual descriptions and art direction for the guild's hunters.
 
-`description-clients.md` - Visual descriptions and art direction for client testimonial portraits.
+`guild-site/clients.md` - Visual descriptions and art direction for client testimonial portraits.
 
 These documents define the intended appearance and help keep visual
 assets consistent with the overall identity of The Wyrm Hunters.
@@ -86,7 +96,7 @@ An agent can be evaluated through a sequence of tasks:
 2.  Summarize the requirements and identify any ambiguities or conflicts.
 3.  Propose a website architecture and organize the required content.
 4.  Create an implementation plan for the main website and its features.
-5.  Analyze the source visual assets in raw-assets/ and prepare an asset-preparation plan. The directory contains source portraits of clients and hunters, the guild logo, the favicon source image, and a composite image containing the five service icons. The agent should inspect the actual files, identify the required transformations, document the proposed output assets, and submit the plan for user review before modifying the files. See  asset-preparation-plan-specification.md for the expected plan structure and asset-specific requirements.
+5.  Analyze the source visual assets in `guild-site/raw-assets/` and prepare an asset-preparation plan. The directory contains source portraits of clients and hunters, the guild logo, the favicon source image, and a composite image containing the five service icons. The agent should inspect the actual files, identify the required transformations, document the proposed output assets, and submit the plan for user review before modifying the files. See `guild-site/asset-preparation-specification.md` for the expected plan structure and asset-specific requirements.
 6.  Implement the website according to the specifications.
 7.  Review the result for functional completeness, responsive behavior,
     accessibility, and consistency with the brief.
